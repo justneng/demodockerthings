@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  #docker run --rm -p 8888:8080 --name my-demoapp-image-container1 my-demoapp-image
+
+  myapp_no1:
+    image: my-demoapp-image:latest
+    container_name: my-demoapp-image-container1
+    ports:
+      - "8888:8080"
+
+  myapp_no2:
+    image: my-demoapp-image:latest
+    container_name: my-demoapp-image-container2
+    ports:
+      - "8777:8080"
