@@ -3,16 +3,16 @@ A Demo project for build an image application using Spring-boot, Dockerfile and 
 
 DockerFile
 
-# build app jar file
+#### build app jar file
 - `mvn package`
 
-# run jar file with command
+#### run jar file with command
 - `java -Dserver.port=8888 -jar target/demodockerthings-0.0.1-SNAPSHOT.jar`
 
-# create docker image
+#### create docker image
 - `docker build --build-arg JAR_FILE=target/demodockerthings-0.0.1-SNAPSHOT.jar -t my-demoapp-image .`
 
-# start container
+#### start container
 - `docker run  --name my-demoapp-image-container1 my-demoapp-image`
 - `docker run -p 8888:8080 --name my-demoapp-image-container1 my-demoapp-image`
 - `docker ps -f 'status=exited'`
@@ -21,6 +21,6 @@ DockerFile
 - `docker exec -it <<CONTAINER_ID>> bash`
 - `docker logs -f <<CONTAINER_ID>>`
 
-# create docker compose
-# run compose
+#### create docker compose
+#### run compose
 - `docker-compose up -d`
